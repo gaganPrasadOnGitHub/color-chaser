@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #fff;
+  height: 100vh;
+  width: 100dvw;
+  overflow: hidden;
+  background: #000;
+  font-family: 'Gill Sans', sans-serif;
+}
+.flex-center {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row {
+  flex-direction: row;
+}
+.col {
+  flex-direction: column;
+}
+.square {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border-radius: 2px;
+  background: #222;
+  transition: all 200ms ease-in-out;
+}
