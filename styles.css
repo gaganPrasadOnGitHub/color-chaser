@@ -4,12 +4,46 @@
   box-sizing: border-box;
 }
 body {
-  color: #fff;
-  height: 100vh;
-  width: 100dvw;
-  overflow: hidden;
+  padding: 16px;
+  color: #bbb;
+  margin: 0 auto;
   background: #000;
+  max-width: 1200px;
   font-family: 'Gill Sans', sans-serif;
+}
+h1 {
+  margin: 8px 0 16px;
+}
+
+label {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}
+input[type='range'] {
+  height: 5px;
+  opacity: 0.8;
+  outline: none;
+  appearance: none;
+  background: #222;
+  border-radius: 5px;
+  -webkit-appearance: none;
+}
+input[type='range']::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  appearance: none;
+  border-radius: 50%;
+  background: #bbb;
+  -webkit-appearance: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#boxesContainer {
+  margin-top: 24px;
+  align-self: center;
 }
 .flex-center {
   gap: 8px;

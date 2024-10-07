@@ -7,9 +7,22 @@
     <link rel="stylesheet" href="./styles.css" />
     <title>Color Chaser</title>
   </head>
-  <body class="flex-center col">
+  <body>
     <h1>Color Chaser</h1>
-    <div id="container" class="flex-center col"></div>
+    <p>Filters</p>
+    <label for="rowsInput">
+      <input type="range" id="rowsInput" min="5" max="25" value="15" step="5" />
+      <span>Number of rows (<span id="rowsValue">15</span>)</span>
+    </label>
+    <label for="squaresInput">
+      <input type="range" id="squaresInput" min="5" max="25" value="20" step="5" />
+      <span>Number of squares (<span id="squaresValue">20</span>)</span>
+    </label>
+    <label for="delayInput">
+      <input type="range" id="delayInput" min="0" max="5000" value="600" step="200" />
+      <span>Delay (<span id="delayValue">600</span> ms)</span>
+    </label>
+    <div id="boxesContainer" class="flex-center col"></div>
     <script type="text/javascript" src="./index.js"></script>
   </body>
 </html>
