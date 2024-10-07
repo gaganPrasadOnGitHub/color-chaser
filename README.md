@@ -7,7 +7,7 @@ Color Chaser is an interactive project where hovering over squares triggers a pl
 - Clone or download the repository.
 - Open the `index.html` file in any modern browser.
 - Use the range inputs to customize the number of rows, squares, and the delay duration for color reset.
-- Hover over the squares to watch the color-changing effect.
+- Hover over the squares to watch the color changing effect.
 
 ## Customization
 
