@@ -7,8 +7,6 @@ const squaresValue = document.getElementById('squaresValue');
 const delayValue = document.getElementById('delayValue');
 const colorsList = ['#fc59a3', '#87c830', '#ffd400', '#fe7e0f', '#8e3ccb', '#ff3155', '#2daefd'];
 
-let delay = 400;
-
 function setColor(element) {
   const color = getRandomColor();
   element.style.background = color;
@@ -37,7 +35,7 @@ function generateGrid(rows, squares) {
       square.addEventListener('mouseover', () => setColor(square));
 
       square.addEventListener('mouseout', () => {
-        setTimeout(() => resetColor(square), delay);
+        setTimeout(() => resetColor(square), delayInput.value);
       });
 
       row.appendChild(square);
@@ -47,24 +45,23 @@ function generateGrid(rows, squares) {
 }
 
 rowsInput.addEventListener('input', () => {
-  let rows = parseInt(rowsInput.value);
-  let squares = parseInt(squaresInput.value);
+  const rows = parseInt(rowsInput.value);
+  const squares = parseInt(squaresInput.value);
   rowsValue.textContent = rows;
 
   generateGrid(rows, squares);
 });
 
 squaresInput.addEventListener('input', () => {
-  let squares = parseInt(squaresInput.value);
-  let rows = parseInt(rowsInput.value);
+  const squares = parseInt(squaresInput.value);
+  const rows = parseInt(rowsInput.value);
   squaresValue.textContent = squares;
 
   generateGrid(rows, squares);
 });
 
 delayInput.addEventListener('input', () => {
-  delay = parseInt(delayInput.value);
-  delayValue.textContent = delay;
+  delayValue.textContent = parseInt(delayInput.value);
 });
 
 generateGrid(parseInt(rowsInput.value), parseInt(squaresInput.value));
